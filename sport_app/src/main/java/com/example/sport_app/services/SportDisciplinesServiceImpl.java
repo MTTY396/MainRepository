@@ -18,6 +18,7 @@ public class SportDisciplinesServiceImpl implements SportDisciplinesService {
                 .id(UUID.randomUUID())
                 .name("bieg na 100m")
                 .build();
+
         Discipline discipline2 = Discipline.builder()
                 .id(UUID.randomUUID())
                 .name("bieg przez plotki")
@@ -32,11 +33,31 @@ public class SportDisciplinesServiceImpl implements SportDisciplinesService {
                 .id(UUID.randomUUID())
                 .name("skok wzwyż")
                 .build();
+        Discipline discipline5 = Discipline.builder()
+                .id(UUID.randomUUID())
+                .name("rzut dyskiem")
+                .build();
+        Discipline discipline6 = Discipline.builder()
+                .id(UUID.randomUUID())
+                .name("rzut oszczepem")
+                .build();
+        Discipline discipline7 = Discipline.builder()
+                .id(UUID.randomUUID())
+                .name("pływanie")
+                .build();
+        Discipline discipline8 = Discipline.builder()
+                .id(UUID.randomUUID())
+                .name("jazda na rowerze")
+                .build();
 
         disciplineMap.put(discipline1.getId(), discipline1);
         disciplineMap.put(discipline2.getId(), discipline2);
         disciplineMap.put(discipline3.getId(), discipline3);
         disciplineMap.put(discipline4.getId(), discipline4);
+        disciplineMap.put(discipline5.getId(), discipline5);
+        disciplineMap.put(discipline6.getId(), discipline6);
+        disciplineMap.put(discipline7.getId(), discipline7);
+        disciplineMap.put(discipline8.getId(), discipline8);
     }
 
     @Override
