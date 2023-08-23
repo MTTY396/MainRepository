@@ -5,6 +5,7 @@ import com.example.sport_app.model.Discipline;
 import com.example.sport_app.services.SportDisciplinesService;
 import lombok.AllArgsConstructor;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,10 +16,11 @@ import java.util.List;
 import java.util.UUID;
 
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 @RestController
 //@RequestMapping("/api/v1/disciplines")
 public class SportDisciplinesController {
+
     private final SportDisciplinesService sportDisciplinesService;
 
     @RequestMapping(value = "/api/v1/disciplines", method = RequestMethod.GET)
