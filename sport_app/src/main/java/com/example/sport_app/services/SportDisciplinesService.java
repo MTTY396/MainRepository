@@ -11,5 +11,11 @@ public interface SportDisciplinesService {
     List<Discipline> listDiscipline();
 
     Discipline getDiciplineById(UUID id);
+
+    Discipline saveNewDiscipline(Discipline discipline);
+
+    void updateById(UUID id, Discipline discipline);
+
+    void deleteById(UUID id);
 }
 

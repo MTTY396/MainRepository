@@ -8,6 +8,6 @@ import java.util.UUID;
 @Builder
 @Data
 public class Discipline {
-    private UUID id;
     private String name;
+    private UUID id;
 }

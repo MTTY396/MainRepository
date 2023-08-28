@@ -10,4 +10,10 @@ public interface CompetitorService {
     Competitor getCompetitorById(UUID id);
 
     List<Competitor> getAllCompetitors();
+
+    Competitor saveNewCompetitor(Competitor competitor);
+
+    void updateById(UUID id, Competitor competitor);
+
+    void deleteById(UUID id);
 }

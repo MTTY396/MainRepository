@@ -10,7 +10,10 @@ import java.util.UUID;
 @Builder
 public class Competitor {
 
-    private String name;
+    private String firstName;
+    private String lastName;
+    private String age;
+    private String startNumber;
     private UUID id;
 
 }

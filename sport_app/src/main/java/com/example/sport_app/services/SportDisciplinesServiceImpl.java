@@ -70,4 +70,29 @@ public class SportDisciplinesServiceImpl implements SportDisciplinesService {
     public Discipline getDiciplineById(UUID id) {
         return disciplineMap.get(id);
     }
+
+    @Override
+    public Discipline saveNewDiscipline(Discipline discipline) {
+
+        Discipline savedDiscipline = Discipline.builder()
+                .name(discipline.getName())
+                .id(UUID.randomUUID())
+                .build();
+
+        disciplineMap.put(savedDiscipline.getId(), savedDiscipline);
+        return savedDiscipline;
+    }
+
+    @Override
+    public void updateById(UUID id, Discipline discipline) {
+        Discipline existing = disciplineMap.get(id);
+        existing.setName(discipline.getName());
+
+        disciplineMap.put(existing.getId(), existing);
+    }
+
+    @Override
+    public void deleteById(UUID id) {
+        disciplineMap.remove(id);
+    }
 }
